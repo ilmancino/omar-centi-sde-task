@@ -157,7 +157,9 @@ def ingest_data():
         published_date = results['next_published_date']
 
         # the API gives me a rate of 5 requests per minute
-        _logger.info("***Waiting 13 seconds before next request to avoid exceeding API's rate limit ...")
+        _logger.info("**")
+        _logger.info("**")
+        _logger.info("Waiting 13 seconds before next request to avoid exceeding API's rate limit ...")
         sleep(13)
 
 
@@ -165,7 +167,7 @@ def main():
     ingest_data()
     generate_reports()
 
-    input("Press Enter to finish, or check the output files in the container before :)")
+    input("\nPress Enter to finish, or check the output files in the container before :)")
 
 
 if __name__ == '__main__':
