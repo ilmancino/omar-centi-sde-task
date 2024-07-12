@@ -157,7 +157,7 @@ def ingest_data():
         published_date = results['next_published_date']
 
         # the API gives me a rate of 5 requests per minute
-        _logger.info("Waiting a few seconds before next request to avoid exceeding API's rate limit ...")
+        _logger.info("***Waiting 13 seconds before next request to avoid exceeding API's rate limit ...")
         sleep(13)
 
 

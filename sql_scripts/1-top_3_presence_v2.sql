@@ -1,3 +1,5 @@
+--this version gets the book which remained the longest in the top 3
+--without considering if it was consecutive or not
 WITH top_3
      AS (SELECT book_sk,
                 published_date

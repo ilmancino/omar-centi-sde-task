@@ -34,7 +34,7 @@ I have used docker compose to orchestrate the execution of the application and i
 ./run_application.sh {NTY API Key} {DB User} {DB Password}
 ```
 
-**Note**:
+**NOTE**:
 I found that the NYT API only allows me to execute 5 requests per minute, so I added a stop of a few seconds to the application to void exceeding the limit. **This delays the execution**.
 
 **Prerequisites**:

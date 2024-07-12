@@ -1,3 +1,5 @@
+--this version gets the book which remained the longest, in consecutive, 
+--publications in the top 3
 WITH top_3_ranked
      AS (
         -- assign an incremental id to publications based on date
