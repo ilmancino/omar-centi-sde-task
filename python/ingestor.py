@@ -44,6 +44,8 @@ def insert_into_db(
         publications_df: pd.DataFrame
         ):
 
+    create_tables()
+
     _logger.info("Inserting data into DB...")
     insert_into_table(df=books_df, table='stg_books', if_exists='replace')
     merge_tables(
@@ -67,9 +69,6 @@ def insert_into_db(
 
 def ingest_data():
     _logger.info(f"Fetching data from NYT API from {START_DATE} to {END_DATE}")
-
-    _logger.info("Creating target tables if they don't exist...")
-    create_tables()
 
     # Fetch data day by day
     published_date = START_DATE
